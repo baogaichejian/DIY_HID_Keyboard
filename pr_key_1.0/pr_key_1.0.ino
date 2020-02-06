@@ -49,8 +49,8 @@ void loop() {
     if (digitalRead(BUTTON) == LOW) {
 
       if (lastButtonState == HIGH) {
-        //Keyboard.press(KEY_LEFT_CTRL);
-        Keyboard.press(KEY_LEFT_GUI);
+        //Keyboard.press(KEY_LEFT_CTRL);    //这行是Windows系统中Ctrl键命令
+        Keyboard.press(KEY_LEFT_GUI);       //这行是MAC系统专用  win系统请删除这行
         Keyboard.press('k');
         delay(100);
         Keyboard.releaseAll();
